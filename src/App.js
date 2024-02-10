@@ -13,19 +13,27 @@ function App() {
   const [pic1,setNewDice1] = useState(dices[0])
   const [pic2,setNewDice2] = useState(dices[1])
 
+
+   function randomDice() {
+    let randomNumber1 = Math.floor(Math.random() * 6) 
+    let randomNumber2 = Math.floor(Math.random() * 6)
+    setNewDice1(dices[randomNumber1])
+    setNewDice2(dices[randomNumber2])
+  }
+
   return (
     <div className="App">
       <h1 >Player 1 Wins!!! </h1>
       <div>
        <div>
         <h2>Player 1</h2>
-         <img src={pic1} />
+         <img src={pic1} alt='dice' />
        </div>
        <div>
         <h2>Player 2</h2>
-        <img src={pic2} />
+        <img src={pic2} alt='dice' />
        </div>
-         <button>Roll Dices</button>
+         <button onClick={randomDice}>Roll Dices</button>
       </div>
     </div>
   );
