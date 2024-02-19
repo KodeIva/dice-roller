@@ -47,6 +47,7 @@ function App() {
         <img src={pic2} alt='dice' />
        </div>
          <button onClick={randomDice}>Roll Dices</button>
+         <button onClick={() => setRolls(10)}>Restart Game</button>
       </div>
     </div>
   );
