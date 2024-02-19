@@ -14,6 +14,18 @@ function App() {
   const [pic2,setNewDice2] = useState(dices[1])
   const [message, setMessage] = useState("Click the button to roll the dices")
   const [rolls, setRolls] = useState(10)
+  const [disable, setDisable] = useState(false)
+
+      function disableButton() {
+    if(rolls <= 1) {
+      setDisable(true)
+      console.log('not disabled');
+    }else if(rolls > 1){
+      setDisable(false)
+      console.log('disabled');
+    }
+  
+  }
 
    function randomDice() {
     let randomNumber1 = Math.floor(Math.random() * 6) 
@@ -29,7 +41,10 @@ function App() {
     }else{
      setMessage("Draw!")
     }
+
+    disableButton()
   }
+
 
 
 
@@ -46,7 +61,7 @@ function App() {
         <h2>Player 2</h2>
         <img src={pic2} alt='dice' />
        </div>
-         <button onClick={randomDice}>Roll Dices</button>
+         <button disabled={disable} onClick={randomDice}>Roll Dices</button>
          <button onClick={() => setRolls(10)}>Restart Game</button>
       </div>
     </div>
