@@ -13,13 +13,14 @@ function App() {
   const [pic1,setNewDice1] = useState(dices[0])
   const [pic2,setNewDice2] = useState(dices[1])
   const [message, setMessage] = useState("Click the button to roll the dices")
-
+  const [rolls, setRolls] = useState(10)
 
    function randomDice() {
     let randomNumber1 = Math.floor(Math.random() * 6) 
     let randomNumber2 = Math.floor(Math.random() * 6)
     setNewDice1(dices[randomNumber1])
     setNewDice2(dices[randomNumber2])
+    setRolls(rolls - 1)
 
     if(randomNumber1 > randomNumber2) {
        setMessage("Player 1 Wins!") 
@@ -30,9 +31,12 @@ function App() {
     }
   }
 
+
+
   return (
     <div className="App">
       <h1>{message}</h1>
+      <h2>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
       <div>
        <div>
         <h2>Player 1</h2>
