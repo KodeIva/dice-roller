@@ -16,15 +16,16 @@ function App() {
   const [rolls, setRolls] = useState(10)
   const [disable, setDisable] = useState(false)
 
-      function disableButton() {
+  function disableButton() {
     if(rolls <= 1) {
       setDisable(true)
-      console.log('not disabled');
-    }else if(rolls > 1){
-      setDisable(false)
-      console.log('disabled');
+      console.log('not disabled')
     }
-  
+  }
+
+  function restartGame() {
+    setRolls(10)
+    setDisable(false)
   }
 
    function randomDice() {
@@ -41,11 +42,10 @@ function App() {
     }else{
      setMessage("Draw!")
     }
-
     disableButton()
   }
 
-
+ 
 
 
   return (
@@ -62,7 +62,7 @@ function App() {
         <img src={pic2} alt='dice' />
        </div>
          <button disabled={disable} onClick={randomDice}>Roll Dices</button>
-         <button onClick={() => setRolls(10)}>Restart Game</button>
+         <button onClick={restartGame}>Restart Game</button>
       </div>
     </div>
   );
