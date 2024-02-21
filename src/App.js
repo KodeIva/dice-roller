@@ -15,6 +15,8 @@ function App() {
   const [message, setMessage] = useState("Click the button to roll the dices")
   const [rolls, setRolls] = useState(10)
   const [disable, setDisable] = useState(false)
+  const [score1, setScore1] = useState(0)
+  const [score2, setScore2] = useState(0)
 
   function disableButton() {
     if(rolls <= 1) {
@@ -54,11 +56,11 @@ function App() {
       <h2>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
       <div>
        <div>
-        <h2>Player 1</h2>
+        <h2>Player 1 - Score {score1}</h2>
          <img src={pic1} alt='dice' />
        </div>
        <div>
-        <h2>Player 2</h2>
+        <h2>Player 2 - Score {score2}</h2>
         <img src={pic2} alt='dice' />
        </div>
          <button disabled={disable} onClick={randomDice}>Roll Dices</button>
