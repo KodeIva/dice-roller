@@ -38,9 +38,11 @@ function App() {
     setRolls(rolls - 1)
 
     if(randomNumber1 > randomNumber2) {
-       setMessage("Player 1 Wins!") 
+       setMessage("Player 1 wins a point!") 
+       setScore1(score1 + 1)
     }else if(randomNumber2 > randomNumber1){
-       setMessage("Player 2 Wins!") 
+       setMessage("Player 2 wins a point!")
+       setScore2(score2 + 1) 
     }else{
      setMessage("Draw!")
     }
