@@ -19,7 +19,7 @@ function App() {
   const [score1, setScore1] = useState(0)
   const [score2, setScore2] = useState(0)
 
-  function disableButton() {
+  function endGame() {
     if(rolls <= 1) {
       setDisable(true)
       gameWinner(score1,score2)
@@ -58,7 +58,7 @@ function App() {
     }else{
      setMessage("Draw!")
     }
-    disableButton()
+    endGame()
   }
 
  
