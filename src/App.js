@@ -13,6 +13,7 @@ function App() {
   const [pic1,setNewDice1] = useState(dices[0])
   const [pic2,setNewDice2] = useState(dices[1])
   const [message, setMessage] = useState("Click the button to roll the dices")
+  const [winner,setWinner] = useState("")
   const [rolls, setRolls] = useState(10)
   const [disable, setDisable] = useState(false)
   const [score1, setScore1] = useState(0)
@@ -21,8 +22,16 @@ function App() {
   function disableButton() {
     if(rolls <= 1) {
       setDisable(true)
-      console.log('not disabled')
+      gameWinner(score1,score2)
     }
+  }
+
+  function gameWinner(score1,score2) {
+   if(score1 > score2) {
+     setWinner("Player 1 Wins the game")
+   }else{
+     setWinner("Player 2 Wins the Game")
+   }
   }
 
   function restartGame() {
@@ -57,6 +66,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>{winner}</h1>
       <h1>{message}</h1>
       <h2>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
       <div>
