@@ -40,6 +40,7 @@ function App() {
     setScore1(0)
     setScore2(0)
     setMessage("Click the button to roll the dices")
+    setWinner("")
   }
 
    function randomDice() {
