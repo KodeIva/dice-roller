@@ -28,6 +28,9 @@ function App() {
   function restartGame() {
     setRolls(10)
     setDisable(false)
+    setScore1(0)
+    setScore2(0)
+    setMessage("Click the button to roll the dices")
   }
 
    function randomDice() {
