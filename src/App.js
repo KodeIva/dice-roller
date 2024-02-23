@@ -66,7 +66,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="bg-sky-50 h-[100vh] w-[100%] flex justify-center">
       <h1>{winner}</h1>
       <h1>{message}</h1>
       <h2>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
