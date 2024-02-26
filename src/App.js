@@ -28,9 +28,9 @@ function App() {
 
   function gameWinner(score1,score2) {
    if(score1 > score2) {
-     setWinner("Player 1 Wins the game")
+     setWinner("Player 1 Wins the game!!!")
    }else{
-     setWinner("Player 2 Wins the Game")
+     setWinner("Player 2 Wins the Game!!!")
    }
   }
 
@@ -66,10 +66,14 @@ function App() {
 
 
   return (
-    <div className="bg-sky-50 h-[100vh] w-[100%] flex flex-col justify-center items-center">
-      <h1>{winner}</h1>
-      <h1>{message}</h1>
-      <h2>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
+    <div className="bg-sky-50 h-[100vh] w-[100%] flex flex-col justify-center items-center text-3xl">
+      <h1 
+       className='text-3xl text-red-800 mb-5 italic font-bold'
+      >
+       {winner}
+      </h1>
+      <h2 className='text-2xl'>{message}</h2>
+      <h2 className='text-2xl'>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
       <div className='mid'>
        <div className='mid'>
         <h2>Player 1 - Score {score1}</h2>
