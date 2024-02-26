@@ -79,7 +79,7 @@ function App() {
         <h2>Player 2 - Score {score2}</h2>
         <img src={pic2} alt='dice' />
        </div>
-        <div className='bg-blue-500 h-auto w-[300px] flex space-x-3'>
+        <div className='h-auto w-[300px] flex space-x-3'>
          <button 
             disabled={disable}
             onClick={randomDice}
