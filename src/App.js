@@ -70,12 +70,12 @@ function App() {
       <h1>{winner}</h1>
       <h1>{message}</h1>
       <h2>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
-      <div>
-       <div>
+      <div className='mid'>
+       <div className='mid'>
         <h2>Player 1 - Score {score1}</h2>
          <img src={pic1} alt='dice' />
        </div>
-       <div>
+       <div className='mid'>
         <h2>Player 2 - Score {score2}</h2>
         <img src={pic2} alt='dice' />
        </div>
