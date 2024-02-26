@@ -75,12 +75,14 @@ function App() {
       <h2 className='text-2xl'>{message}</h2>
       <h2 className='text-2xl'>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
       <div className='mid'>
-       <div className='mid'>
-        <h2>Player 1 - Score {score1}</h2>
+       <div className='mid m-8'>
+        <h2 className='mb-2 text-xl text-gray-700 font-medium'>Player 1 -
+         <span className=' text-blue-800'> Score {score1}</span> </h2>
          <img src={pic1} alt='dice' />
        </div>
-       <div className='mid'>
-        <h2>Player 2 - Score {score2}</h2>
+       <div className='mid mb-8'>
+        <h2 className='mb-2 text-xl text-gray-700 font-medium'>Player 2 -   <span className=' text-blue-800'>Score {score2}</span>
+        </h2>
         <img src={pic2} alt='dice' />
        </div>
         <div className='h-auto w-[300px] flex space-x-3'>
