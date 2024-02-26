@@ -66,7 +66,7 @@ function App() {
 
 
   return (
-    <div className="bg-sky-50 h-[100vh] w-[100%] flex justify-center">
+    <div className="bg-sky-50 h-[100vh] w-[100%] flex flex-col justify-center items-center">
       <h1>{winner}</h1>
       <h1>{message}</h1>
       <h2>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
@@ -79,6 +79,7 @@ function App() {
         <h2>Player 2 - Score {score2}</h2>
         <img src={pic2} alt='dice' />
        </div>
+        <div className='bg-blue-500 h-auto w-[300px] flex space-x-3'>
          <button 
             disabled={disable}
             onClick={randomDice}
@@ -92,6 +93,7 @@ function App() {
          >
           Restart Game
          </button>
+        </div>
       </div>
     </div>
   );
