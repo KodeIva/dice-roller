@@ -79,8 +79,19 @@ function App() {
         <h2>Player 2 - Score {score2}</h2>
         <img src={pic2} alt='dice' />
        </div>
-         <button disabled={disable} onClick={randomDice}>Roll Dices</button>
-         <button onClick={restartGame}>Restart Game</button>
+         <button 
+            disabled={disable}
+            onClick={randomDice}
+            className='bg-green-600 rounded-md border-2 border-transparent  py-1 px-2 text-2xl hover:border-green-600 hover:bg-white hover:text-green-600 text-white transition ease-in-out duration-700 '
+         >
+          Roll Dices
+         </button>
+         <button 
+            onClick={restartGame}
+            className='bg-red-600 rounded-md border-2 border-transparent  py-1 px-2 text-2xl hover:border-red-600 hover:bg-white hover:text-red-600 text-white transition ease-in-out duration-700 '
+         >
+          Restart Game
+         </button>
       </div>
     </div>
   );
