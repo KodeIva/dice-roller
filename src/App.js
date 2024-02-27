@@ -12,7 +12,7 @@ function App() {
   
   const [pic1,setNewDice1] = useState(dices[0])
   const [pic2,setNewDice2] = useState(dices[1])
-  const [message, setMessage] = useState("Click the button to roll the dices")
+  const [message, setMessage] = useState("")
   const [winner,setWinner] = useState("")
   const [rolls, setRolls] = useState(10)
   const [disable, setDisable] = useState(false)
@@ -23,6 +23,7 @@ function App() {
     if(rolls <= 1) {
       setDisable(true)
       gameWinner(score1,score2)
+      setMessage("")
     }
   }
 
@@ -39,7 +40,7 @@ function App() {
     setDisable(false)
     setScore1(0)
     setScore2(0)
-    setMessage("Click the button to roll the dices")
+    setMessage("")
     setWinner("")
   }
 
@@ -67,11 +68,12 @@ function App() {
 
   return (
     <div className="bg-sky-50 h-[100vh] w-[100%] flex flex-col justify-center items-center text-3xl">
-      <h1 
-       className='text-3xl text-red-800 mb-5 italic font-bold'
+      <h1 className='text-3xl text-slate-600 font-medium mb-6 italic'  >Click the button to roll the dices</h1>
+      <h2 
+       className='text-2xl text-red-800 mb-5 italic font-bold'
       >
        {winner}
-      </h1>
+      </h2>
       <h2 className='text-3xl text-slate-600 font-medium mb-6 italic '>{message}</h2>
       <h2 className='text-2xl'>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
       <div className='mid'>
