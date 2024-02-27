@@ -72,7 +72,7 @@ function App() {
       >
        {winner}
       </h1>
-      <h2 className='text-2xl'>{message}</h2>
+      <h2 className='text-3xl text-slate-600 font-medium mb-6 italic '>{message}</h2>
       <h2 className='text-2xl'>{rolls >= 1 ? `${rolls} Rolls Left` : "Game Over"}</h2>
       <div className='mid'>
        <div className='mid m-8'>
