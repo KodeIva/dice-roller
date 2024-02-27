@@ -80,16 +80,17 @@ function App() {
       >
         {rolls >= 1 ? `${rolls} Rolls Left` : <h3 className='text-red-500'>Game Over</h3>}
       </h2>
-      <div className='mid'>
-       <div className='mid m-8'>
+      <div className='mid bg-slate-300 md:flex md:flex-row md:justify-center md:items-center'>
+       <div className='mid m-6'>
         <h2 className='mb-2 text-xl text-gray-700 font-medium'>Player 1 -
          <span className=' text-blue-800'> Score {score1}</span> </h2>
          <img src={pic1} alt='dice' />
        </div>
-       <div className='mid mb-8'>
+       <div className='mid m-6'>
         <h2 className='mb-2 text-xl text-gray-700 font-medium'>Player 2 -   <span className=' text-blue-800'>Score {score2}</span>
         </h2>
         <img src={pic2} alt='dice' />
+       </div>
        </div>
         <div className='h-auto w-[300px] flex space-x-3'>
          <button 
@@ -106,7 +107,7 @@ function App() {
           Restart Game
          </button>
         </div>
-      </div>
+      
     </div>
   );
 }
