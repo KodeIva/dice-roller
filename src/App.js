@@ -70,17 +70,17 @@ function App() {
     <div className="bg-sky-50 h-[100vh] w-[100%] flex flex-col justify-center items-center text-3xl">
       <h1 className='text-3xl text-slate-600 font-medium mb-6 italic'  >Click the button to roll the dices</h1>
       <h2 
-       className='text-2xl text-green-600 mb-5 italic font-bold'
+       className='text-2xl h-9  bg-orange-600 text-green-600 mb-5 italic font-bold'
       >
        {winner}
       </h2>
-      <h2 className='text-3xl text-slate-600 font-medium mb-6 italic '>{message}</h2>
+      <h2 className='text-3xl bg-orange-600 h-9 text-slate-600 font-medium mb-6 italic '>{message}</h2>
       <h2 
         className='text-2xl text-slate-600 font-medium'
       >
         {rolls >= 1 ? `${rolls} Rolls Left` : <h3 className='text-red-500'>Game Over</h3>}
       </h2>
-      <div className='mid bg-slate-300 md:flex md:flex-row md:justify-center md:items-center'>
+      <div className='mid md:flex md:flex-row md:justify-center md:items-center'>
        <div className='mid m-6'>
         <h2 className='mb-2 text-xl text-gray-700 font-medium'>Player 1 -
          <span className=' text-blue-800'> Score {score1}</span> </h2>
