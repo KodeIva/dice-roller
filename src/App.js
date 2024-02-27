@@ -68,13 +68,13 @@ function App() {
 
   return (
     <div className="bg-sky-50 h-[100vh] w-[100%] flex flex-col justify-center items-center text-3xl">
-      <h1 className='text-3xl text-slate-600 font-medium mb-6 italic'  >Click the button to roll the dices</h1>
+      <h1 className='text-3xl text-slate-600 font-medium mt-5 italic'  >Click the button to roll the dices</h1>
       <h2 
-       className='text-2xl h-9  bg-orange-600 text-green-600 mb-5 italic font-bold'
+       className='text-2xl h-7 mt-9 text-green-600 italic font-bold'
       >
        {winner}
       </h2>
-      <h2 className='text-3xl bg-orange-600 h-9 text-slate-600 font-medium mb-6 italic '>{message}</h2>
+      <h2 className='text-2xl h-7 text-slate-600 font-medium mb-6 italic '>{message}</h2>
       <h2 
         className='text-2xl text-slate-600 font-medium'
       >
