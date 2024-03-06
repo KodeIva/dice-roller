@@ -67,8 +67,8 @@ function App() {
 
 
   return (
-    <div className="bg-sky-50 h-[100vh] w-[100%] flex flex-col justify-center items-center text-3xl">
-      <h1 className='text-3xl text-slate-600 font-medium mt-5 italic'  >Click the button to roll the dices</h1>
+    <div className="bg-sky-50 h-[auto] md:h-[100vh] w-[100%] p-2 flex flex-col justify-center items-center">
+      <h1 className='text-2xl md:text-3xl text-slate-600 font-medium mt-5 italic'  >Click the button to roll the dices</h1>
       <h2 
        className='text-2xl h-7 mt-9 text-green-600 italic font-bold'
       >
@@ -92,17 +92,17 @@ function App() {
         <img src={pic2} alt='dice' />
        </div>
        </div>
-        <div className='h-auto w-[300px] flex space-x-3'>
+        <div className='flex justify-center items-center h-auto w-[300px]  space-x-3'>
          <button 
             disabled={disable}
             onClick={randomDice}
-            className='bg-green-600 rounded-md border-2 border-transparent  py-1 px-2 text-2xl hover:border-green-600 hover:bg-white hover:text-green-600 text-white transition ease-in-out duration-700 '
+            className='bg-green-600 rounded-md border-2 border-transparent  py-2 px-2 text-xl md:text-2xl hover:border-green-600 hover:bg-white hover:text-green-600 text-white transition ease-in-out duration-700 '
          >
           Roll Dices
          </button>
          <button 
             onClick={restartGame}
-            className='bg-red-600 rounded-md border-2 border-transparent  py-1 px-2 text-2xl hover:border-red-600 hover:bg-white hover:text-red-600 text-white transition ease-in-out duration-700 '
+            className='bg-red-600 rounded-md border-2 border-transparent  py-2 px-2 text-xl md:text-2xl hover:border-red-600 hover:bg-white hover:text-red-600 text-white transition ease-in-out duration-700 '
          >
           Restart Game
          </button>
