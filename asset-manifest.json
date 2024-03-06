@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dice-roller/static/css/main.5666b00b.css",
+    "main.js": "/dice-roller/static/js/main.b9a354cb.js",
+    "index.html": "/dice-roller/index.html",
+    "main.5666b00b.css.map": "/dice-roller/static/css/main.5666b00b.css.map",
+    "main.b9a354cb.js.map": "/dice-roller/static/js/main.b9a354cb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5666b00b.css",
+    "static/js/main.b9a354cb.js"
+  ]
+}
